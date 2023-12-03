@@ -1,0 +1,193 @@
+Critical Topics
+Dictionaries
+
+Why are dictionaries necessary? Why not use a list?
+
+How is the lookup time in a dictionary different from that of a list?
+
+How do you create an empty dictionary? How do you create a dictionary with initial content?
+
+How do you add a new key/value pair to a dictionary? How do you update the value of a key in a dictionary?
+
+How do you remove a key/value pair from a dictionary?
+
+How do you look up the value for a given key in a dictionary?
+
+How do you iterate over a dictionary?
+
+Print keys?
+
+Print values?
+
+Print keys and values?
+
+What is a KeyError? When does one occur?
+
+Dictionary methods to know:
+
+.get()
+
+.values()
+
+.items()
+
+How do you access a dictionary within a dictionary?
+
+When should you use a dictionary?
+
+Python Tools
+What are some characteristics of Python as compared to other programming languages?
+
+What are .pyc files? What is their purpose?
+
+What’s the difference between the commands python3 mygame.py and python3 -i mygame.py?
+
+Built-in Python functions to know:
+
+dir()
+
+help()
+
+Why does code style matter?
+
+Key points of Python style to know
+
+Tabs vs. Spaces
+
+Line length and how to break lines for readability
+
+Where to put whitespace
+
+Variable name style
+
+Docstrings and comments
+
+What is sys.argv? What happens if you print it out?
+
+Markov Chains
+In the context of Markov chains, what is a bigram? What’s an n-gram?
+
+How could you use dictionaries to structure a bigram markov chain implementation?
+
+Shell
+VS Code shortcuts to know and use:
+
+CTRL-/ to comment/uncomment
+
+CTRL-] and CTRL-[ to indent/dedent (or tab and shift + tab)
+
+Shell shortcuts and commands to know and use:
+
+Tab completion
+
+Up arrow/Down arrow to navigate history
+
+CTRL-A to go to beginning of line
+
+CTRL-E to go to end of line
+
+CTRL-D to delete moving forward
+
+head <some file name>
+
+cat <some file name>
+
+tail <some file name>
+
+wc <some file name>
+
+sort <some file name>
+
+grep <term> <some file name>
+
+Using * to file name glob
+
+env
+
+echo $PATH
+
+which python
+
+export SOME_VARIABLE='some value'
+
+What is STDIN? How do you capture it using Python?
+
+What is STDOUT? How do you push to it using Python?
+
+What is STDERR?
+
+How do you redirect the output of one shell command to a file?
+
+How do you redirect the output of one shell command and append it to a file?
+
+How do you redirect the content of a file as input to an interactive Python script?
+
+How do you redirect the output of one shell command to the input of another?
+
+What is the shell environment?
+
+What is the $PATH environment variable? What role does it play on the command line?
+
+How can you access the shell environment in Python?
+
+How do you set environment variables using a .sh file?
+
+Python Projects
+What is a Python module?
+
+What is a namespace?
+
+What are the 3 ways to import something in Python?
+
+Why is from some_module import * not a good practice?
+
+When should you import a whole library versus only one function, class, etc.?
+
+What does if __name__ == "__main__" ask? When should you include this check at the bottom of your file?
+
+Where are the three places that you can import things from?
+
+What is pip?
+
+What is a virtual environment? How is that different than a virtual machine?
+
+Why are virtual environments necessary?
+
+How do you create a virtual environment? How do you activate it?
+
+What command can you use to view the currently installed Python libraries?
+
+What should you name the file that has the list of a Python project’s dependencies?
+
+Classes
+How are classes different than dictionaries in terms of structure, flexibility, and data storage?
+
+What is the relationship between a class and an instance?
+
+What is instantiation?
+
+What are attributes? How do you define an attribute at the class level (to be shared by all instances)? How do you set a new attribute on an instance? How can you update the value of an attribute on an instance?
+
+What is a method? How do you define a method on a class? How do you call a method?
+
+What are the key differences between functions and methods?
+
+What is initialization? How is it different than instantiation?
+
+What is __init__? When does it get called?
+
+What is encapsulation? What is abstraction? What is polymorphism?
+
+What is inheritance? When is it appropriate for one class to inherit attributes and/or methods from another?
+
+What are the various ways in which a child class can modify methods and attributes from a parent class?
+
+What is super()?
+
+What’s an example of violating polymorphism? What’s an example of enforcing polymorphism?
+
+When overriding parent methods, what is the only method that is normal to require different arguments than the parent method?
+
+What is an abstract class? What makes it different than a typical class?
+
+When there are methods that don’t directly map to an existing hierarchy, how can you continue to pursue encapsulation? (i.e. avoid copying the same method on several classes)
