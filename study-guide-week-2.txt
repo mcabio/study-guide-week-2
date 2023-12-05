@@ -41,22 +41,56 @@ Print values?
     - for contents in fridge:
           print(fridge[contents])
 Print keys and values?
-
+    - fridge[key] = value
+    - print(fridge) ?
 What is a KeyError? When does one occur?
-
+    - An error that occurs when we are attempting to index into a dictionary 
+      with a non-existent key.
+    - This also happens when you use square brackets ([]) to retrieve the 
+      value associated with a specific key, but the key is not present in the dictionary.
 Dictionary methods to know:
 
 .get()
-
+    - used to retrieve the value associated with a specified key in a dictionary. 
+      It provides a way to access dictionary elements without raising a KeyError if the key is not present.
+      The syntax for dict.get(key, default) is as follows:
+        key: The key whose associated value you want to retrieve.
+        default: (Optional) The value to be returned if the specified key is not found in the dictionary. 
+        If not provided, it defaults to None
 .values()
-
+    - This prints out only the values.
+    - Ex: fridge.values()
+            dict_values([3, 2, 1, 4, 2])
+    - Ex: for contents in fridg.values()
+            print(contents)
 .items()
+    - Similar to enumerate. Returns a view object that displays a list of a dictionary's key-value tuple pairs.
+      Used when you need to iterate over both keys and values in a dictionary.
+    - Ex. 
+      my_dict = {'name': 'John', 'age': 25, 'gender': 'Male'}
+      items_view = my_dict.items()
+
+      for key, value in items_view:
+          print(f"Key: {key}, Value: {value}")
 
 How do you access a dictionary within a dictionary?
+    - animals['pony']['bites']
+    - In this example, animals is a dictionary of different animals. Pony is one of the animals in the dictionary. 
+      'bites' is an attriute (boolean) in the 'pony' dictionary.
+    - So the output would be true in the example
 
 When should you use a dictionary?
+    - When you want to store information that is accessible by key
+    - Counting
+    - Fast Lookups: Dictionaries provide fast and efficient lookups 
+      based on keys.
+    - Mapping Relationships: Dictionaries are well-suited for 
+      representing and working with relationships between entities. 
+      For example, you can use a dictionary to represent a person's attributes, 
+      a product's details, or any other entity with associated properties.
 
 Python Tools
+
 What are some characteristics of Python as compared to other programming languages?
 
 What are .pyc files? What is their purpose?
