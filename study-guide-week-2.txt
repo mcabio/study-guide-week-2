@@ -2,23 +2,44 @@ Critical Topics
 Dictionaries
 
 Why are dictionaries necessary? Why not use a list?
+    - You can index using keys instead of numbers (ie. "Get item stored at duck" instead of "get third item")
+    - Faster search time. We can find out if 'duck' is in the dictionary right away in lieu of looping through 
+      each time, one by one.
+    - Lists have to look at every item, which takes longer. 
 
 How is the lookup time in a dictionary different from that of a list?
+    - The example used when looping through a list was like looking for the Queen of Hearts inside a deck of cards;
+      looking at each card one at a time.
+    - Dictionaries are just that, since it's ordered, we would just have to open the dictionary to the letter "Q"
+      and flip to the correct page.
 
 How do you create an empty dictionary? How do you create a dictionary with initial content?
+    - To create an empty dictonary: empty_dict = {}
+    - Creating a dictionary with initial content. In this example, fridge is the dictionary
+    and key are contents inside the fridge. Pairs are the amount of each:
+    fridge = {'cheese': 3, 'soda': 2, 'ketchup': 1, 'tomato': 4, 'zucchini': 2}
 
 How do you add a new key/value pair to a dictionary? How do you update the value of a key in a dictionary?
+    - To update: fridge['zucchini'] = 4
+    - To add would be similar: fridge['bread'] = 1
 
 How do you remove a key/value pair from a dictionary?
+    - By using the del keyword
+    - Ex: del fridge['ketchup']
 
 How do you look up the value for a given key in a dictionary?
-
+    - fridge['soda'] is one way
+    - 'tomato' in fridge is another (returns True or False)
+    - dict.get is another: fridge.get('cabbage', 'It's not in there')
 How do you iterate over a dictionary?
+    - Using a for loop: for contents (key) in fridge (name of dictionary):
 
 Print keys?
-
+    - for contents in fridge:
+          print(contents)
 Print values?
-
+    - for contents in fridge:
+          print(fridge[contents])
 Print keys and values?
 
 What is a KeyError? When does one occur?
