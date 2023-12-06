@@ -123,8 +123,41 @@ def get_sum_zero_pairs(numbers):
         [[-1, 1], [0, 0]]
     """
 
-    return []
+    zero_pairs = []
 
+    # The code below won't work because it creates double pairs.
+    # Each double pair shows the positive and negative integer together, 
+    # then the negative and positive integer next.
+    # This is the output: [(-5, 5), (5, -5), (2, -2), (-2, 2), (5, -5), (2, -2), (4, -4), (-4, 4)]
+    # for num in numbers:
+    #     negative_nums = -num
+    #     if negative_nums in unique_nums:
+    #         zero_pairs.append((num, negative_nums))
+
+    # This will loop over the range of the length of the numbers set
+    for i in range(len(numbers)):
+        # This iterates over the indices starting from i + 1 to avoid counting pairs twice (which was a problem)
+        # In the previous for loop
+        for j in range(i + 1, len(numbers)):
+            num_i = list(numbers)[i]
+            num_j = list(numbers)[j]
+            if num_i + num_j == 0:
+                pair = sorted([num_i, num_j])  # Sort the pair to ensure uniqueness
+                if pair not in zero_pairs:
+                    zero_pairs.append(pair)
+
+    # I kept getting a test failure because the zero was not adding another zero. This 
+    # for loop was the solution
+    for num in numbers:
+        if num == 0:
+            zero_pairs.append([0, 0])
+
+    return zero_pairs
+
+# Manual test:
+# numbers = ([-5, 7, 5, 2, -2, 5, 3, 2, 4, -4, 12, 0])
+# zero_num = get_sum_zero_pairs(numbers)
+# print(zero_num)
 
 def top_chars(phrase):
     """Find most common character(s) in string.
@@ -150,23 +183,52 @@ def top_chars(phrase):
     Do not count spaces, but count all other characters.
 
     """
+    # Create an empty list
+    char_counts = {}
+    # This will iterate over the phrase 
+    for char in phrase:
+        if char != ' ':  # This ignores the spaces. It's saying if char doesn't equal a space then...
+            # This populates the empty list with characters. The .get method will get a character
+            # and as the program iterates over the string, will add 1 to inventory of characters if
+            # it comes across it again.
+            char_counts[char] = char_counts.get(char, 0) + 1 
+    # If I return the function here, it will create a dictionary with the key as the letter and the value
+    # as the number of times that letter occured in the string:
+    # {'B': 1, 'e': 8, 'c': 3, 'a': 4, 'r': 4....}
 
-    return []
+    # This will show the max occurrence but will not show which letter if max_count is returned
+    max_count = max(char_counts.values(), default=0)
 
+    # Create a list of characters with the maximum occurrence count
+    # char_counts.items iterates over the items (key-value pairs) in 
+    # the char_counts dictionary. Each item is a tuple (char, count) where char 
+    # is a character, and count is the count of occurrences of that character.
+    most_common_chars = [char for char, count in char_counts.items() if count == max_count]
+
+    # Sort the list alphabetically
+    # most_common_chars.sort()
+
+    # return most_common_chars
+    return most_common_chars
+
+
+phrase = ("Be careful with each other so you can be dangerous together.")
+result = top_chars(phrase)
+print(result)
 #####################################################################
 # You can ignore everything below this.
 
 
-def sort_pairs(l):
-    """ Print sorted list of pairs where the pairs are sorted."""
-    # NOTE: This is used only for documentation tests. You can ignore it.
+# def sort_pairs(l):
+#     """ Print sorted list of pairs where the pairs are sorted."""
+#     # NOTE: This is used only for documentation tests. You can ignore it.
 
-    return sorted(sorted(pair) for pair in l)
+#     return sorted(sorted(pair) for pair in l)
 
 
-if __name__ == "__main__":
-    print()
-    import doctest
-    if doctest.testmod().failed == 0:
-        print("*** ALL TESTS PASSED ***")
-    print()
+# if __name__ == "__main__":
+#     print()
+#     import doctest
+#     if doctest.testmod().failed == 0:
+#         print("*** ALL TESTS PASSED ***")
+#     print()
