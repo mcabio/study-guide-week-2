@@ -92,8 +92,22 @@ When should you use a dictionary?
 Python Tools
 
 What are some characteristics of Python as compared to other programming languages?
+    - Strongly-typed
+        - The type of a value doesn't change
+        - '1' does not become 1 magically
+    - Dynamic
+        - Able to create new data and occupy more memory as the program returns.
+        - Instead of allocating memory during a compilation phase
+    - High-level
+        - Allows devs to think at higher levels of abstraction.
+        - Syntax is more English-like
+        - Programs run more slowly but devs are more productive
+        - Most modern programming happens with high-level langs.
 
-What are .pyc files? What is their purpose?
+What are .pyc files? What is their purpose? 
+    - A place python keeps a copy of compiled sources so you don't have to compile twice
+        
+
 
 What’s the difference between the commands python3 mygame.py and python3 -i mygame.py?
 

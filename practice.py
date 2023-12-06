@@ -41,9 +41,17 @@ def without_duplicates(words):
         >>> type(without_duplicates([111111, 2, 33333, 2]))
         <class 'list'>
     """
-
-    return []
-
+    # This will turn words, originally a list, into a set. I chose this because sets remove all duplicates.
+    no_dupes = set(words)
+    # I then turn the no_dupes set back into a list.
+    return list(no_dupes)
+# input is a list of words with duplicates
+# Output is a list of words with duplicates removed
+# Use integers as well
+# Manual test:
+# words = (['I', 'I', 'have', 'have', 2, 2, 'beautiful', 'beautiful', 'dogs', 'dogs', 'and', 'and', 'their', 'their', 'names', 'names', 'are', 'are', 'Achilles', 'Achilles', 'and', 'and', 'Athena', 'Athena'])
+# result = without_duplicates(words)
+# print(result)
 
 def find_unique_common_items(items1, items2):
     """Produce the set of *unique* common items in two lists.
