@@ -85,9 +85,16 @@ def find_unique_common_items(items1, items2):
         >>> sorted(find_unique_common_items(["2", "1", 2], [2, 1]))
         [2]
     """
+    # .intersection is used to find similar items from two different lists. 
+    both_puppers = set(items1).intersection(items2)
+    return (both_puppers)
 
     return set()
 
+# items1 = (['Athena', 'is', 'black', 'big', 'cute', 'moody', 'loving', 'cuddly'])
+# items2 = (['Achilles', 'is', 'black', 'smoll', 'cute', 'hyper', 'loving', 'cuddly'])
+# both_puppers = find_unique_common_items(items1, items2)
+# print(both_puppers)
 
 def get_sum_zero_pairs(numbers):
     """Given list of numbers, return list of pairs summing to 0.
