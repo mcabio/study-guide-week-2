@@ -212,23 +212,23 @@ def top_chars(phrase):
     return most_common_chars
 
 
-phrase = ("Be careful with each other so you can be dangerous together.")
-result = top_chars(phrase)
-print(result)
+# phrase = ("Be careful with each other so you can be dangerous together.")
+# result = top_chars(phrase)
+# print(result)
 #####################################################################
 # You can ignore everything below this.
 
 
-# def sort_pairs(l):
-#     """ Print sorted list of pairs where the pairs are sorted."""
-#     # NOTE: This is used only for documentation tests. You can ignore it.
+def sort_pairs(l):
+    """ Print sorted list of pairs where the pairs are sorted."""
+    # NOTE: This is used only for documentation tests. You can ignore it.
 
-#     return sorted(sorted(pair) for pair in l)
+    return sorted(sorted(pair) for pair in l)
 
 
-# if __name__ == "__main__":
-#     print()
-#     import doctest
-#     if doctest.testmod().failed == 0:
-#         print("*** ALL TESTS PASSED ***")
-#     print()
+if __name__ == "__main__":
+    print()
+    import doctest
+    if doctest.testmod().failed == 0:
+        print("*** ALL TESTS PASSED ***")
+    print()
